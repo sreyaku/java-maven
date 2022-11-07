@@ -1,6 +1,7 @@
-FROM openjdk:8
-echo COPY target/spring-boot-hello-world-example-0.0.1-SNAPSHOT.jar C:/ProgramData/Jenkins/.jenkins/workspace/JENKINS-CICD
-echo RUN dir
-echo EXPOSE 8081
-echo CMD ["java", "-jar","spring-boot-hello-world-example-0.0.1-SNAPSHOT.jar"]
+ FROM openjdk:8
+ COPY target/spring-boot-hello-world-example-0.0.1-SNAPSHOT.jar .
+ COPY "C:\Users\Sreya SU\Desktop\DockerJenkinsCICD\JenkinsCICD-master"/pom.xml target
+ RUN dir
+ EXPOSE 8081
+ CMD ["java", "-jar","spring-boot-hello-world-example-0.0.1-SNAPSHOT.jar"]
  
